@@ -16,3 +16,65 @@ body {
   background-color: #FAF9F6;
   color: #141414;
 }
+
+/* ---------- Hero loader + entrance animations ---------- */
+
+/* Curtain: waits 1.8s (while the progress line fills), then slides up */
+/* ---------- Hero loader + entrance animations ---------- */
+
+/* Loader overlay: holds while the line fills, then dissolves away */
+.hero-loader {
+  animation: loader-dissolve 1s ease-in-out 1.9s forwards;
+}
+@keyframes loader-dissolve {
+  from { opacity: 1; }
+  to   { opacity: 0; visibility: hidden; } /* never blocks clicks afterwards */
+}
+
+/* Name + tagline: fade in, hold, then drift out softly */
+.hero-loader-content {
+  animation: loader-content 2.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes loader-content {
+  0%   { opacity: 0; transform: translateY(10px); filter: blur(6px); }
+  25%  { opacity: 1; transform: translateY(0);    filter: blur(0); }
+  80%  { opacity: 1; transform: scale(1);         filter: blur(0); }
+  100% { opacity: 0; transform: scale(1.06);      filter: blur(8px); }
+}
+
+/* Progress line */
+.hero-loader-bar {
+  animation: loader-bar 1.6s cubic-bezier(0.65, 0, 0.35, 1) 0.2s both;
+}
+@keyframes loader-bar {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* Photo waits for the dissolve, then slowly settles into place */
+.hero-image {
+  animation: hero-image 3.2s cubic-bezier(0.22, 1, 0.36, 1) 1.7s both;
+}
+@keyframes hero-image {
+  from { transform: scale(1.1); }
+  to   { transform: scale(1); }
+}
+
+/* Text rises in while the loader is still fading out */
+.hero-rise {
+  animation: hero-rise 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(2.3s + var(--d, 0s));
+}
+@keyframes hero-rise {
+  from { opacity: 0; transform: translateY(24px); filter: blur(6px); }
+  to   { opacity: 1; transform: translateY(0);    filter: blur(0); }
+}
+
+
+/* Respect "reduce motion" settings: skip the loader, show everything */
+@media (prefers-reduced-motion: reduce) {
+  .hero-loader { display: none; }
+  .hero-image,
+  .hero-rise,
+  .scroll-line { animation: none; }
+}
