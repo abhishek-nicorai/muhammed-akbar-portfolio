@@ -59,7 +59,7 @@ export default function Header() {
         />
 
         <div
-          className={`relative mx-auto flex max-w-7xl items-center justify-between px-6 transition-all duration-500 md:px-12 ${
+          className={`site-container relative flex items-center justify-between transition-all duration-500 ${
             scrolled ? "h-[72px]" : "h-24"
           } ${light ? "text-white" : "text-ink-900"}`}
         >

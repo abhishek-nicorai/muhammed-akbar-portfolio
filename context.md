@@ -91,3 +91,7 @@
 - Rebuilt the Header: transparent with white text over the Hero, then a frosted cream bar with dark text after scrolling. It also has hover underlines, an active-page indicator, and a full-screen dark mobile menu with staggered links and an animated hamburger.
 - Header is now `fixed`, so inner pages (not home) get a `h-24` spacer to stop content sitting under it.
 - Removed the Inquire button from both desktop and mobile navigation.
+
+## 3. Latest Update
+- Built modular `FeaturedSlider.tsx` with slide counter, keyboard support, progress indicators, and editorial metadata overlays.
+- Defined strong types (`src/types/featured.ts`) and curated works (`src/constants/featured.ts`).

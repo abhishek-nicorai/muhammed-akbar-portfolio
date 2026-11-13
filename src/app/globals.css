@@ -17,6 +17,24 @@ body {
   color: #141414;
 }
 
+@utility site-container {
+  width: 100%;
+  max-width: 80rem;      /* same as max-w-7xl */
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+  @media (min-width: 768px) {
+    padding-inline: 3rem;
+  }
+}
+
+/* One shared vertical spacing for every section */
+@utility section-y {
+  padding-block: 5rem;
+  @media (min-width: 768px) {
+    padding-block: 8rem;
+  }
+}
+
 /* ---------- Hero loader + entrance animations ---------- */
 
 /* Curtain: waits 1.8s (while the progress line fills), then slides up */
@@ -77,4 +95,20 @@ body {
   .hero-image,
   .hero-rise,
   .scroll-line { animation: none; }
+}
+
+
+/* ---------- Featured slider autoplay progress ---------- */
+@keyframes slide-progress {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+.slide-progress {
+  transform-origin: left;
+  animation: slide-progress 6s linear forwards;
+}
+
+/* Reduced motion: no autoplay, slides change only when clicked */
+@media (prefers-reduced-motion: reduce) {
+  .slide-progress { animation: none; }
 }

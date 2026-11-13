@@ -23,7 +23,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <section className="relative flex min-h-[580px] h-svh w-full items-end overflow-hidden px-6 pb-12 md:px-16 md:pb-16">
+      <section className="relative flex min-h-[580px] h-svh w-full items-end overflow-hidden pb-12 md:pb-16">
         {/* Photography */}
         <div className="absolute inset-0 -z-10 overflow-hidden">
           <div className="hero-image absolute inset-0">
@@ -43,7 +43,7 @@ export default function Hero() {
         </div>
 
         {/* Content */}
-        <div className="mx-auto w-full max-w-7xl text-[#FAF9F6]">
+        <div className="site-container text-[#FAF9F6]">
           <div className="flex flex-col justify-between gap-10 md:flex-row md:items-end">
             <div className="max-w-3xl space-y-5">
               <p className="hero-rise flex items-center gap-3 font-sans text-[11px] uppercase tracking-[0.3em] text-neutral-300">
