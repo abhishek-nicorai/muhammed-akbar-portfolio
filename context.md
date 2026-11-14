@@ -95,3 +95,31 @@
 ## 3. Latest Update
 - Built modular `FeaturedSlider.tsx` with slide counter, keyboard support, progress indicators, and editorial metadata overlays.
 - Defined strong types (`src/types/featured.ts`) and curated works (`src/constants/featured.ts`).
+
+
+
+# Project Context: Muhammed Akbar Portfolio
+
+## 1. Project Status
+- Phase: Phase 2 - Homepage Construction
+- Active Task: Homepage Component 4 Complete (About Preview Block)
+- Status: Ready for Homepage Component 5 (Booking / Inquiry CTA Banner)
+
+## 2. Implementation Checklist
+### Homepage Components:
+- [x] 1. Editorial Hero Section (`src/components/home/Hero.tsx`)
+- [x] 2. Featured Stories Full-Width Slider (`src/components/home/FeaturedSlider.tsx`)
+- [x] 3. Color Grading Before/After Interactive Comparison (`src/components/home/ColorGradingTeaser.tsx`)
+- [x] 4. About Preview Block & Artist Statement (`src/components/home/AboutPreview.tsx`)
+- [ ] 5. Inquiry & Booking CTA Banner (`src/components/home/InquiryCTA.tsx`)
+
+### Subsequent Pages:
+- [ ] Dynamic Case Study Route (`/portfolio/[slug]`)
+- [ ] Full Color Grading Showcase (`/color-grading`)
+- [ ] Editorial About & Experience Page (`/about`)
+- [ ] Client Booking & Inquiry Page (`/contact`)
+- [ ] Deployment to Vercel & Domain Switch
+
+## 3. Latest Update
+- Created `src/constants/about.ts` holding artist intro statements and location stamps.
+- Built responsive 2-column `AboutPreview.tsx` featuring portrait image hover states and 3-line editorial narrative.
